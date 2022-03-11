@@ -56,9 +56,113 @@
         <div id="reported">
             <h1>Reported posts</h1>
         </div>
-    </main>
-    <footer></footer>
 
+        <section>
+            <article class="my-5 w-75 mx-auto">
+                <h1 class="text-center">FQA (frequently questioned answers)</h1>
+
+                <div class="accordion accordion-flush shadow" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                aria-controls="flush-collapseOne">
+                                How dose Javascript work?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Javascript is a client side single-threaded, asynchronous,
+                                non-blocking, interpreted script language who run browser and nodeJS. Each browser have
+                                javascript engine for run javascript. Like chrome and nodeJS have V8 Engine, FireFox
+                                have
+                                spiderMonkey, internet explorer have chakra.
+                                Javascript Engine have <code>parser</code> who check javascript code line by line when
+                                get a error stop
+                                Execution
+                                code and
+                                through a error message. If code is perfect <code>parser</code> sent a deta structure
+                                <code>AST (Abstract Syntex Tree)</code>
+                                convert to machine code. When code is converted in machine code then javascript code run
+                                in
+                                browser.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                aria-controls="flush-collapseTwo">
+                                What dose Javascript event loop do?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">Each browser have runtime or js engine for executing Javascript
+                                code and runtime or js engine have two parts heap and <code>call stack</code>. basically
+                                heap
+                                dose memory management job and call stack is like arranging books on books, when a
+                                function invoke its go to the call stack and executing function invoke another function
+                                the engine add the function to the stack. Once finished executing second function engine
+                                takes out from the stack then executing first function and remove the function from
+                                stack and continue the same process. But when engine find out <code>asynchronous</code>
+                                element in
+                                the stack like <code>setTimeOut, setInerval, fetch, promise</code> etc that time engine
+                                take out this
+                                element from the stack and give it <code>web api or browser api</code> and web api
+                                complete the task
+                                asynchronous callback function then puts it the <code>callback queue</code>. In the
+                                stack as usual
+                                execution function and pops out stack also the <code>main()</code> pops out of the stack
+                                in the mean
+                                time <code>event loop</code> recognizes the call stack is empty and callback queue have
+                                a callback
+                                function then <code>event loop</code> put the callback function into the call stack and
+                                nothing else
+                                is in the stack <code>event loop</code> execute callback queue further.</div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                What is difference of local storage and session storage?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body"><code>SessionStorage</code> :- Session Storage is Unique per
+                                tab. Its session based work per window or tab. If you close the tab SessionsStorage gets
+                                deleted. It’s expired when tab is close. <br>
+                                <code>LocalStorage</code> :- It is not Session Based, it must be deleted via javascript
+                                or manually. It’s expired date is forever.
+                                <br>
+                                <br>
+                                <code>SessionStorage</code> :- The storage capacity of session storage is 5mb. <br>
+                                <code>LocalStorage</code> :- The storage capacity of Local Storage 5 to 10 mb (browser
+                                depend).
+                                <br>
+                                <br>
+                                <code>SessionStorage</code> :- Accessibility of session storage only same
+                                tab. <br>
+                                <code>LocalStorage</code> :- Accessibility of Local Storage Any window
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer class="bg-light py-3">
+        <p class="text-dark text-center">All rights reserve: &copy; R Silvaan</p>
+    </footer>
+
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
     <!-- add javascript  file  -->
     <script src="./js/app.js"></script>
 </body>
