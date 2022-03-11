@@ -67,25 +67,21 @@
                             <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseOne" aria-expanded="false"
                                 aria-controls="flush-collapseOne">
-                                How dose Javascript work?
+                                How does Javascript work in the browser?
                             </button>
                         </h2>
                         <div id="flush-collapseOne" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Javascript is a client side single-threaded, asynchronous,
-                                non-blocking, interpreted script language who run browser and nodeJS. Each browser have
-                                javascript engine for run javascript. Like chrome and nodeJS have V8 Engine, FireFox
-                                have
-                                spiderMonkey, internet explorer have chakra.
-                                Javascript Engine have <code>parser</code> who check javascript code line by line when
-                                get a error stop
-                                Execution
-                                code and
-                                through a error message. If code is perfect <code>parser</code> sent a deta structure
-                                <code>AST (Abstract Syntex Tree)</code>
-                                convert to machine code. When code is converted in machine code then javascript code run
-                                in
-                                browser.
+                            <div class="accordion-body">
+                                Javascript is a client side single-threaded, asynchronous, non-blocking, concurrency,
+                                interpreted script language that runs browser and nodeJS. Each browser has a javascript
+                                engine for running javascript. Like chrome and nodeJS have V8 Engine, FireFox have
+                                spiderMonkey, internet explorer have chakra. Javascript Engine has a
+                                <code>parser</code> who checks javascript code line by line when an error stops
+                                Execution code and through an error message. If code is perfect, the parser sends a data
+                                structure <code>AST (Abstract Syntex Tree)</code> converted to machine code. When code
+                                is converted
+                                into machine code then javascript code runs in the browser.
                             </div>
                         </div>
                     </div>
@@ -94,33 +90,30 @@
                             <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseTwo" aria-expanded="false"
                                 aria-controls="flush-collapseTwo">
-                                What dose Javascript event loop do?
+                                What does javacript event loop do?
                             </button>
                         </h2>
                         <div id="flush-collapseTwo" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-                            <div class="accordion-body">Each browser have runtime or js engine for executing Javascript
-                                code and runtime or js engine have two parts heap and <code>call stack</code>. basically
-                                heap
-                                dose memory management job and call stack is like arranging books on books, when a
-                                function invoke its go to the call stack and executing function invoke another function
-                                the engine add the function to the stack. Once finished executing second function engine
-                                takes out from the stack then executing first function and remove the function from
-                                stack and continue the same process. But when engine find out <code>asynchronous</code>
-                                element in
-                                the stack like <code>setTimeOut, setInerval, fetch, promise</code> etc that time engine
-                                take out this
-                                element from the stack and give it <code>web api or browser api</code> and web api
-                                complete the task
-                                asynchronous callback function then puts it the <code>callback queue</code>. In the
-                                stack as usual
-                                execution function and pops out stack also the <code>main()</code> pops out of the stack
-                                in the mean
-                                time <code>event loop</code> recognizes the call stack is empty and callback queue have
-                                a callback
-                                function then <code>event loop</code> put the callback function into the call stack and
-                                nothing else
-                                is in the stack <code>event loop</code> execute callback queue further.</div>
+                            <div class="accordion-body">Each browser has a runtime or js engine for executing Javascript
+                                code and the runtime or js engine have two parts: heap and <code>call stack</code>.
+                                Basically Heap does memory management and call stack is like arranging books on books,
+                                when a function invokes its go to the call stack and executing function invokes another
+                                function the engine adds the function to the stack. Once finished executing the second
+                                function engine takes out from the stack then executes the first function and removes
+                                the function from stack and continues the same process.
+                                But when engine find out <code>asynchronous</code> element in the stack like
+                                <code>setTimeOut, setInerval, fetch, promise</code> etc that time engine take out this
+                                element from the stack and give it <code>web api or browser api</code>, and web api
+                                complete the task asynchronous callback function then puts it the
+                                <code>callback queue</code>. In the stack as usual execution function and pops out stack
+                                also the <code>main()</code> pops out of the stack in the meantime
+                                <code>event loop</code> recognizes the call stack is empty and callback queue have a
+                                callback function then <code>event loop</code> put the callback function into the call
+                                stack and nothing else is in the stack <code>event loop</code> execute callback queue
+                                further.
+
+                            </div>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -128,16 +121,16 @@
                             <button class="accordion-button collapsed fw-bolder" type="button" data-bs-toggle="collapse"
                                 data-bs-target="#flush-collapseThree" aria-expanded="false"
                                 aria-controls="flush-collapseThree">
-                                What is difference of local storage and session storage?
+                                What is the difference between Local Storage and Session Storage?
                             </button>
                         </h2>
                         <div id="flush-collapseThree" class="accordion-collapse collapse"
                             aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
                             <div class="accordion-body"><code>SessionStorage</code> :- Session Storage is Unique per
-                                tab. Its session based work per window or tab. If you close the tab SessionsStorage gets
-                                deleted. It’s expired when tab is close. <br>
+                                tab. Its session based work per window or tab. If you close the tab, SessionsStorage
+                                gets deleted. It expires when the tab is closed. <br>
                                 <code>LocalStorage</code> :- It is not Session Based, it must be deleted via javascript
-                                or manually. It’s expired date is forever.
+                                or manually. It’s expiration date is forever.
                                 <br>
                                 <br>
                                 <code>SessionStorage</code> :- The storage capacity of session storage is 5mb. <br>
@@ -145,9 +138,9 @@
                                 depend).
                                 <br>
                                 <br>
-                                <code>SessionStorage</code> :- Accessibility of session storage only same
-                                tab. <br>
-                                <code>LocalStorage</code> :- Accessibility of Local Storage Any window
+                                <code>SessionStorage</code> :- Accessibility of session storage only in the same tab.
+                                <br>
+                                <code>LocalStorage</code> :- Accessibility of Local Storage Any window.
                             </div>
                         </div>
                     </div>
